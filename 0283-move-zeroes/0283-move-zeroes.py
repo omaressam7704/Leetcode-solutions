@@ -4,10 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: None Do not return anything, modify nums in-place instead.
         """
-        num = len(nums)
-        i = 0
-        while i < num:
-            if nums[i] == 0:
+        num = 0
+        while num < len(nums):
+            if nums[num] == 0:
                 nums.remove(0)
                 nums.append(0)
-            i+=1
+            num+=1
