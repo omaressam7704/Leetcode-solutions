@@ -3,7 +3,6 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
-import math as m
 class Solution(object):
     def count(self, head):
         trav = head
@@ -24,18 +23,14 @@ class Solution(object):
         elif(cnt == 1):
             head = None
             return head
+        cnt = cnt // 2
         if cnt % 2 == 0:
-            cnt = (cnt/2)
-            cnt = int(cnt)
-            print(cnt)
             trav = head
             i = 0
             for i in range(cnt-1):
                 trav = trav.next
             trav.next = trav.next.next
         else:
-            cnt = m.floor(cnt/2)
-            cnt = int(cnt)
             trav = head
             i = 0
             for i in range(cnt-1):
