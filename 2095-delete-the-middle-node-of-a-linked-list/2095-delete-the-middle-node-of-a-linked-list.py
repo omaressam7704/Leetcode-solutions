@@ -16,6 +16,7 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[ListNode]
         """
+        trav = head
         cnt = self.count(head)
         if(cnt == 2):
             head.next = None
@@ -25,15 +26,11 @@ class Solution(object):
             return head
         cnt = cnt // 2
         if cnt % 2 == 0:
-            trav = head
-            i = 0
             for i in range(cnt-1):
                 trav = trav.next
             trav.next = trav.next.next
             return head
         else:
-            trav = head
-            i = 0
             for i in range(cnt-1):
                 trav = trav.next
             trav.next = trav.next.next
