@@ -30,10 +30,11 @@ class Solution(object):
             for i in range(cnt-1):
                 trav = trav.next
             trav.next = trav.next.next
+            return head
         else:
             trav = head
             i = 0
             for i in range(cnt-1):
                 trav = trav.next
             trav.next = trav.next.next
-        return head
+            return head
