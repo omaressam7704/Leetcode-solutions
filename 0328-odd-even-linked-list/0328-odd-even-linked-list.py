@@ -11,13 +11,10 @@ class Solution(object):
         """
         if not head or not head.next:
             return head
-
-        odd_head = head
-        even_head = head.next
-
-        odd_ptr = odd_head
-        even_ptr = even_head
-
+        
+        odd_head, even_head = head, head.next
+        odd_ptr, even_ptr = odd_head, even_head
+        
         while even_ptr and even_ptr.next:
             odd_ptr.next = even_ptr.next
             odd_ptr = odd_ptr.next
