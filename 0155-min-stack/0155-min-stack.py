@@ -3,7 +3,6 @@ class MinStack(object):
     def __init__(self):
         self.stack=[]
         self.top_=-1
-        self.count=0
     def push(self, val):
         """
         :type val: int
@@ -11,14 +10,12 @@ class MinStack(object):
         """
         self.top_+=1
         self.stack.append(val)
-        self.count+=1
     def pop(self):
         """
         :rtype: None
         """
         if self.stack:
             self.stack.pop()
-            self.count-=1
             self.top_-=1
     def top(self):
         """
