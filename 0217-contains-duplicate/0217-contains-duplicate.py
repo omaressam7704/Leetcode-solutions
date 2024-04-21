@@ -4,13 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        countMap = {}
-        for name in nums:
-            if name not in countMap:
-                countMap[name] = 1
-            else:
-                countMap[name] += 1
-        for key,val in countMap.items():
-            if val > 1:
-                return True  
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
         return False
